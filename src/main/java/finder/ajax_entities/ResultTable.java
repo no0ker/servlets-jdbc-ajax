@@ -1,5 +1,6 @@
 package finder.ajax_entities;
 
+import finder.Entity.Car;
 import finder.Entity.User;
 
 import java.util.HashSet;
