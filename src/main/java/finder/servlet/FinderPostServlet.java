@@ -4,6 +4,7 @@ import finder.ajax_entities.ResultTable;
 import finder.ajax_entities.Row;
 import finder.db.DbHelper;
 import finder.db.SqlHelper;
+import org.apache.log4j.Logger;
 
 import javax.naming.NamingException;
 import javax.servlet.ServletException;
@@ -23,6 +24,8 @@ import java.util.HashMap;
 import java.util.List;
 
 public class FinderPostServlet extends HttpServlet {
+
+    private final static Logger LOG = Logger.getLogger(FinderPostServlet.class);
     private SqlHelper sqlHelper = new SqlHelper();
     private String queryName = "find_user";
 
@@ -52,13 +55,12 @@ public class FinderPostServlet extends HttpServlet {
         try {
             ResultTable resultTable = getResultTable(requestData);
             out.println(resultTable.toString());
+            LOG.debug(resultTable.toString());
         } catch (SQLException e) {
             e.printStackTrace();
         } catch (NamingException e) {
             e.printStackTrace();
         }
-
-
     }
 
     private ResultTable getResultTable(HashMap<String, String> requestData) throws IOException, SQLException, NamingException {
