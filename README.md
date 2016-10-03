@@ -14,3 +14,6 @@
 		driverClassName="org.postgresql.Driver"
 		url="jdbc:postgresql://localhost:5432/postgres"/>
 		
+2. deploy  servlets-jdbc-ajax.war 
+3. open /servlets-jdbc-ajax/api/init 
+4. open /servlets-jdbc-ajax
