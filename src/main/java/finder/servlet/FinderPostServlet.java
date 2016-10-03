@@ -55,6 +55,7 @@ public class FinderPostServlet extends HttpServlet {
         try {
             ResultTable resultTable = getResultTable(requestData);
             out.println(resultTable.toString());
+            LOG.debug(requestData.toString());
             LOG.debug(resultTable.toString());
         } catch (SQLException e) {
             e.printStackTrace();
