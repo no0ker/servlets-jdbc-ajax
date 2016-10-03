@@ -36,10 +36,10 @@ public class InitPostServlet extends HttpServlet {
                 out.println("<br> ok");
             } catch (NamingException e) {
                 e.printStackTrace();
-                out.println(e.getMessage());
+                out.println("<br>" + e.getMessage());
             } catch (SQLException e) {
                 e.printStackTrace();
-                out.println(e.getMessage());
+                out.println("<br>" + e.getMessage());
             }
         }
     }

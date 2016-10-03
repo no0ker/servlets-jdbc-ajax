@@ -11,7 +11,7 @@ function send_data()
     message.model = $("#model").val();
 
     $.ajax({
-        url: "/api/getUsers",
+        url: "/servlets-jdbc-ajax/api/getUsers",
         method : "POST",
         data: message,
         success: function(result) {
