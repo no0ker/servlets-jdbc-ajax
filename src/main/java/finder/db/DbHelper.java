@@ -16,7 +16,7 @@ public class DbHelper {
     public static DataSource getDataSource() throws NamingException {
         if (dataSource == null) {
             InitialContext initialContext = new InitialContext();
-            DataSource dataSource = (DataSource) initialContext.lookup(DATA_SOURCE_NAME);
+            dataSource = (DataSource) initialContext.lookup(DATA_SOURCE_NAME);
 
         }
         return dataSource;
@@ -26,7 +26,16 @@ public class DbHelper {
         DataSource dataSource = getDataSource();
         Connection connection = dataSource.getConnection();
         Statement statement = connection.createStatement();
-        ResultSet resultSet = statement.executeQuery("select * from test_date");
+        ResultSet resultSet = statement.executeQuery(query);
         return resultSet;
     }
+
+    public static int executeUpdate(String query) throws NamingException, SQLException {
+        DataSource dataSource = getDataSource();
+        Connection connection = dataSource.getConnection();
+        Statement statement = connection.createStatement();
+        return statement.executeUpdate(query);
+    }
+
+
 }
