@@ -1,6 +1,6 @@
 # servlets-jdbc-ajax
 
-1. change context.xml 
+1. change context.xml in Tomcat's conf directory.
 
 \<Resource 
 		name="jdbc/postgres" 
@@ -15,5 +15,5 @@
 		url="jdbc:postgresql://localhost:5432/postgres"/>
 		
 2. deploy  servlets-jdbc-ajax.war 
-3. open /servlets-jdbc-ajax/api/init 
-4. open /servlets-jdbc-ajax
+3. open /servlets-jdbc-ajax/api/init for create necessary tables
+4. open /servlets-jdbc-ajax and try to find users
