@@ -2,15 +2,19 @@ package finder.ajax_entities;
 
 public class Row {
     private String firstName;
+    private String middleName;
     private String secondName;
     private String city;
-    private String car_color;
+    private String carColor;
+    private String model;
 
-    public Row(String firstName, String secondName, String city, String car_color) {
+    public Row(String firstName, String middleName, String secondName, String city, String carColor, String model) {
         this.firstName = firstName;
+        this.middleName = middleName;
         this.secondName = secondName;
         this.city = city;
-        this.car_color = car_color;
+        this.carColor = carColor;
+        this.model = model;
     }
 
     public String getFirstName() {
@@ -19,6 +23,14 @@ public class Row {
 
     public void setFirstName(String firstName) {
         this.firstName = firstName;
+    }
+
+    public String getMiddleName() {
+        return middleName;
+    }
+
+    public void setMiddleName(String middleName) {
+        this.middleName = middleName;
     }
 
     public String getSecondName() {
@@ -37,11 +49,19 @@ public class Row {
         this.city = city;
     }
 
-    public String getCar_color() {
-        return car_color;
+    public String getCarColor() {
+        return carColor;
     }
 
-    public void setCar_color(String car_color) {
-        this.car_color = car_color;
+    public void setCarColor(String carColor) {
+        this.carColor = carColor;
+    }
+
+    public String getModel() {
+        return model;
+    }
+
+    public void setModel(String model) {
+        this.model = model;
     }
 }
