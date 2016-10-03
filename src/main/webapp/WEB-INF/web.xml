@@ -6,13 +6,23 @@
     <display-name>Archetype Created Web Application</display-name>
 
     <servlet>
-        <servlet-name>PostServlet</servlet-name>
-        <servlet-class>finder.servlet.PostServlet</servlet-class>
+        <servlet-name>FinderServlet</servlet-name>
+        <servlet-class>finder.servlet.FinderPostServlet</servlet-class>
+    </servlet>
+
+    <servlet>
+        <servlet-name>InitServlet</servlet-name>
+        <servlet-class>finder.servlet.InitPostServlet</servlet-class>
     </servlet>
 
     <servlet-mapping>
-        <servlet-name>PostServlet</servlet-name>
+        <servlet-name>FinderServlet</servlet-name>
         <url-pattern>/api/getUsers</url-pattern>
+    </servlet-mapping>
+
+    <servlet-mapping>
+        <servlet-name>InitServlet</servlet-name>
+        <url-pattern>/api/init</url-pattern>
     </servlet-mapping>
 
     <resource-ref>
