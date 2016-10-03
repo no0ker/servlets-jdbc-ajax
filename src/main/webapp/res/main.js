@@ -9,7 +9,7 @@ function send_data()
     message.color = $("#color").val();
 
     $.ajax({
-        url: "/spring-mvc-hibernate/api/getUsers",
+        url: "/api/getUsers",
         method : "POST",
         data: message,
         success: function(result) {

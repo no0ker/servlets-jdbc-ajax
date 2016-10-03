@@ -12,7 +12,7 @@
 
     <servlet-mapping>
         <servlet-name>PostServlet</servlet-name>
-        <url-pattern>/api/test</url-pattern>
+        <url-pattern>/api/getUsers</url-pattern>
     </servlet-mapping>
 
     <resource-ref>
