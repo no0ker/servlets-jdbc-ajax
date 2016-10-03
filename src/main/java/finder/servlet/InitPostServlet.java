@@ -23,7 +23,7 @@ public class InitPostServlet extends HttpServlet {
         PrintWriter out = response.getWriter();
 
         try {
-            DbHelper.executeUpdate(sqlHelper.getQuery("create_cities"));
+            DbHelper.executeUpdate(sqlHelper.getQuery("1-create_cities"));
             out.println("ok");
         } catch (NamingException e) {
             e.printStackTrace();
