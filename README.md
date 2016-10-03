@@ -2,7 +2,7 @@
 
 1. change context.xml 
 
-<Resource 
+\<Resource 
 		name="jdbc/postgres" 
 		auth="Container" 
 		type="javax.sql.DataSource"
